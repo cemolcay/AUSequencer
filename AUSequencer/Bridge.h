@@ -13,5 +13,6 @@
 #include "ABLLinkUtils.h"
 #include "ABLLinkSettingsViewController.h"
 #import "Audiobus.h"
+#include "AKMIDISequencerAudioUnit.h"
 
 #endif /* Bridge_h */

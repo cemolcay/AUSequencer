@@ -8,20 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		7F5060D6D61596E2D121D95A /* Pods_AUSequencer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B776CA485C0B1C7079BCBBF /* Pods_AUSequencer.framework */; };
+		B27462C3204AB992009E4EC3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B27462C2204AB992009E4EC3 /* libstdc++.6.0.9.tbd */; };
+		B27462CE204AC1D2009E4EC3 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27462CD204AC1D2009E4EC3 /* AudioUnitViewController.swift */; };
+		B27462D1204AC1D2009E4EC3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27462CF204AC1D2009E4EC3 /* MainInterface.storyboard */; };
+		B27462D6204AC1D2009E4EC3 /* AUSequencer AUv3.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B27462C8204AC1D2009E4EC3 /* AUSequencer AUv3.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B27462DE204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = B27462DD204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm */; };
+		B27462DF204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = B27462DD204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm */; };
 		B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297E1872049FBF60002DF7E /* AppDelegate.swift */; };
 		B297E18A2049FBF60002DF7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297E1892049FBF60002DF7E /* ViewController.swift */; };
 		B297E18D2049FBF60002DF7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B297E18B2049FBF60002DF7E /* Main.storyboard */; };
 		B297E18F2049FBF60002DF7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B297E18E2049FBF60002DF7E /* Assets.xcassets */; };
 		B297E1922049FBF60002DF7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B297E1902049FBF60002DF7E /* LaunchScreen.storyboard */; };
 		B297E1A22049FC4E0002DF7E /* libABLLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A02049FC4D0002DF7E /* libABLLink.a */; };
-		B297E1A52049FC550002DF7E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A42049FC550002DF7E /* libc++.tbd */; };
 		B297E1A82049FC5F0002DF7E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A72049FC5F0002DF7E /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B27462D4204AC1D2009E4EC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B297E17C2049FBF60002DF7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27462C7204AC1D2009E4EC3;
+			remoteInfo = "AUSequencer AUv3";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B27462DA204AC1D2009E4EC3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B27462D6204AC1D2009E4EC3 /* AUSequencer AUv3.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B776CA485C0B1C7079BCBBF /* Pods_AUSequencer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUSequencer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B30DD865111C34E60F34D2A /* Pods-AUSequencer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer.release.xcconfig"; sourceTree = "<group>"; };
 		9B6B71A853BCCD4EC6631A1A /* Pods-AUSequencer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer.debug.xcconfig"; sourceTree = "<group>"; };
+		B27462C2204AB992009E4EC3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		B27462C8204AC1D2009E4EC3 /* AUSequencer AUv3.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AUSequencer AUv3.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27462CD204AC1D2009E4EC3 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		B27462D0204AC1D2009E4EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B27462D2204AC1D2009E4EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27462D3204AC1D2009E4EC3 /* AUSequencer_AUv3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AUSequencer_AUv3-Bridging-Header.h"; sourceTree = "<group>"; };
+		B27462DC204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMIDISequencerAudioUnit.h; sourceTree = "<group>"; };
+		B27462DD204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AKMIDISequencerAudioUnit.mm; sourceTree = "<group>"; };
 		B297E1842049FBF60002DF7E /* AUSequencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUSequencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B297E1872049FBF60002DF7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B297E1892049FBF60002DF7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,14 +74,22 @@
 		B297E1A62049FC5F0002DF7E /* AUSequencer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUSequencer.entitlements; sourceTree = "<group>"; };
 		B297E1A72049FC5F0002DF7E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B297E1A92049FC870002DF7E /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		B297E1B6204AB4520002DF7E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B27462C5204AC1D2009E4EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1812049FBF60002DF7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B297E1A52049FC550002DF7E /* libc++.tbd in Frameworks */,
+				B27462C3204AB992009E4EC3 /* libstdc++.6.0.9.tbd in Frameworks */,
 				B297E1A22049FC4E0002DF7E /* libABLLink.a in Frameworks */,
 				B297E1A82049FC5F0002DF7E /* AudioToolbox.framework in Frameworks */,
 				7F5060D6D61596E2D121D95A /* Pods_AUSequencer.framework in Frameworks */,
@@ -63,10 +108,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B27462C9204AC1D2009E4EC3 /* AUSequencer AUv3 */ = {
+			isa = PBXGroup;
+			children = (
+				B27462CD204AC1D2009E4EC3 /* AudioUnitViewController.swift */,
+				B27462CF204AC1D2009E4EC3 /* MainInterface.storyboard */,
+				B27462D2204AC1D2009E4EC3 /* Info.plist */,
+				B27462D3204AC1D2009E4EC3 /* AUSequencer_AUv3-Bridging-Header.h */,
+			);
+			path = "AUSequencer AUv3";
+			sourceTree = "<group>";
+		};
+		B27462DB204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit */ = {
+			isa = PBXGroup;
+			children = (
+				B27462DC204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.h */,
+				B27462DD204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm */,
+			);
+			path = AKMIDISequencerAudioUnit;
+			sourceTree = "<group>";
+		};
 		B297E17B2049FBF60002DF7E = {
 			isa = PBXGroup;
 			children = (
 				B297E1862049FBF60002DF7E /* AUSequencer */,
+				B27462C9204AC1D2009E4EC3 /* AUSequencer AUv3 */,
 				B297E1852049FBF60002DF7E /* Products */,
 				B297E1A32049FC540002DF7E /* Frameworks */,
 				2C898175A6DBDDB221BB0298 /* Pods */,
@@ -77,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B297E1842049FBF60002DF7E /* AUSequencer.app */,
+				B27462C8204AC1D2009E4EC3 /* AUSequencer AUv3.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,14 +152,15 @@
 			isa = PBXGroup;
 			children = (
 				B297E1A62049FC5F0002DF7E /* AUSequencer.entitlements */,
-				B297E1992049FC4D0002DF7E /* Link */,
-				B297E1872049FBF60002DF7E /* AppDelegate.swift */,
-				B297E1892049FBF60002DF7E /* ViewController.swift */,
-				B297E18B2049FBF60002DF7E /* Main.storyboard */,
-				B297E18E2049FBF60002DF7E /* Assets.xcassets */,
-				B297E1902049FBF60002DF7E /* LaunchScreen.storyboard */,
 				B297E1932049FBF60002DF7E /* Info.plist */,
 				B297E1A92049FC870002DF7E /* Bridge.h */,
+				B297E18E2049FBF60002DF7E /* Assets.xcassets */,
+				B297E1902049FBF60002DF7E /* LaunchScreen.storyboard */,
+				B297E18B2049FBF60002DF7E /* Main.storyboard */,
+				B297E1872049FBF60002DF7E /* AppDelegate.swift */,
+				B297E1892049FBF60002DF7E /* ViewController.swift */,
+				B27462DB204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit */,
+				B297E1992049FC4D0002DF7E /* Link */,
 			);
 			path = AUSequencer;
 			sourceTree = "<group>";
@@ -127,6 +195,8 @@
 		B297E1A32049FC540002DF7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B27462C2204AB992009E4EC3 /* libstdc++.6.0.9.tbd */,
+				B297E1B6204AB4520002DF7E /* libstdc++.tbd */,
 				B297E1A72049FC5F0002DF7E /* AudioToolbox.framework */,
 				B297E1A42049FC550002DF7E /* libc++.tbd */,
 				1B776CA485C0B1C7079BCBBF /* Pods_AUSequencer.framework */,
@@ -137,6 +207,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B27462C7204AC1D2009E4EC3 /* AUSequencer AUv3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27462D9204AC1D2009E4EC3 /* Build configuration list for PBXNativeTarget "AUSequencer AUv3" */;
+			buildPhases = (
+				B27462C4204AC1D2009E4EC3 /* Sources */,
+				B27462C5204AC1D2009E4EC3 /* Frameworks */,
+				B27462C6204AC1D2009E4EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AUSequencer AUv3";
+			productName = "AUSequencer AUv3";
+			productReference = B27462C8204AC1D2009E4EC3 /* AUSequencer AUv3.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B297E1832049FBF60002DF7E /* AUSequencer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B297E1962049FBF60002DF7E /* Build configuration list for PBXNativeTarget "AUSequencer" */;
@@ -147,10 +234,12 @@
 				B297E1822049FBF60002DF7E /* Resources */,
 				2D15C4A7C45820BF60F6AF4B /* [CP] Embed Pods Frameworks */,
 				70B01A0F6402B3AE267ACB4D /* [CP] Copy Pods Resources */,
+				B27462DA204AC1D2009E4EC3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B27462D5204AC1D2009E4EC3 /* PBXTargetDependency */,
 			);
 			name = AUSequencer;
 			productName = AUSequencer;
@@ -167,6 +256,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = cemolcay;
 				TargetAttributes = {
+					B27462C7204AC1D2009E4EC3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					B297E1832049FBF60002DF7E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -195,11 +288,20 @@
 			projectRoot = "";
 			targets = (
 				B297E1832049FBF60002DF7E /* AUSequencer */,
+				B27462C7204AC1D2009E4EC3 /* AUSequencer AUv3 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B27462C6204AC1D2009E4EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27462D1204AC1D2009E4EC3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1822049FBF60002DF7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,18 +366,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B27462C4204AC1D2009E4EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27462DF204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm in Sources */,
+				B27462CE204AC1D2009E4EC3 /* AudioUnitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1802049FBF60002DF7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B297E18A2049FBF60002DF7E /* ViewController.swift in Sources */,
+				B27462DE204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit.mm in Sources */,
 				B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B27462D5204AC1D2009E4EC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27462C7204AC1D2009E4EC3 /* AUSequencer AUv3 */;
+			targetProxy = B27462D4204AC1D2009E4EC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		B27462CF204AC1D2009E4EC3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27462D0204AC1D2009E4EC3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		B297E18B2049FBF60002DF7E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +423,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B27462D7204AC1D2009E4EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = "AUSequencer AUv3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cemolcay.AUSequencer.AUSequencer-AUv3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AUSequencer AUv3/AUSequencer_AUv3-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B27462D8204AC1D2009E4EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = "AUSequencer AUv3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cemolcay.AUSequencer.AUSequencer-AUv3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AUSequencer AUv3/AUSequencer_AUv3-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B297E1942049FBF60002DF7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -406,15 +568,41 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B6B71A853BCCD4EC6631A1A /* Pods-AUSequencer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AUSequencer/AUSequencer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77Y3N48SNF;
 				INFOPLIST_FILE = AUSequencer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AUSequencer/Link/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Audiobus\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AudioKit\"",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"AudioKitUI\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.AUSequencer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,15 +616,41 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B30DD865111C34E60F34D2A /* Pods-AUSequencer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AUSequencer/AUSequencer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77Y3N48SNF;
 				INFOPLIST_FILE = AUSequencer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AUSequencer/Link/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Audiobus\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AudioKit\"",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"AudioKitUI\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.AUSequencer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +663,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B27462D9204AC1D2009E4EC3 /* Build configuration list for PBXNativeTarget "AUSequencer AUv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27462D7204AC1D2009E4EC3 /* Debug */,
+				B27462D8204AC1D2009E4EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B297E17F2049FBF60002DF7E /* Build configuration list for PBXProject "AUSequencer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

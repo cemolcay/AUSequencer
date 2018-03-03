@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AudioKitUI
+import AudioKit
 
 class ViewController: UIViewController {
 
