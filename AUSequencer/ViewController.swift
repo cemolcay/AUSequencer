@@ -10,9 +10,14 @@ import UIKit
 import AudioKitUI
 import AudioKit
 
+class SequencerEngine {
+  
+}
+
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
   }
 }

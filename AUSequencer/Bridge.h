@@ -6,13 +6,10 @@
 //  Copyright © 2018 cemolcay. All rights reserved.
 //
 
-#ifndef Bridge_h
-#define Bridge_h
+#pragma once
 
+#import "AKMIDISequencerDSP.hpp"
+#import "Audiobus.h"
 #include "ABLLink.h"
 #include "ABLLinkUtils.h"
 #include "ABLLinkSettingsViewController.h"
-#import "Audiobus.h"
-#include "AKMIDISequencerAudioUnit.h"
-
-#endif /* Bridge_h */
