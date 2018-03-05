@@ -19,6 +19,7 @@
 		B2C083FD204D81C0007696B2 /* AKMIDISequencerDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2C083FB204D81C0007696B2 /* AKMIDISequencerDSP.mm */; };
 		B2C083FF204D86AA007696B2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A42049FC550002DF7E /* libc++.tbd */; };
 		B2C08401204D87A0007696B2 /* AKMIDISequencerAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C08400204D87A0007696B2 /* AKMIDISequencerAudioUnit.swift */; };
+		B2C08412204D9B00007696B2 /* ABLLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C08411204D9B00007696B2 /* ABLLinkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,7 @@
 		B2C083FB204D81C0007696B2 /* AKMIDISequencerDSP.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AKMIDISequencerDSP.mm; sourceTree = "<group>"; };
 		B2C083FC204D81C0007696B2 /* AKMIDISequencerDSP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AKMIDISequencerDSP.hpp; sourceTree = "<group>"; };
 		B2C08400204D87A0007696B2 /* AKMIDISequencerAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKMIDISequencerAudioUnit.swift; sourceTree = "<group>"; };
+		B2C08411204D9B00007696B2 /* ABLLinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABLLinkManager.swift; sourceTree = "<group>"; };
 		EF851730127CE0220F328EE1 /* Pods-AUSequencer AUv3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer AUv3.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer AUv3/Pods-AUSequencer AUv3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				B297E18B2049FBF60002DF7E /* Main.storyboard */,
 				B297E1872049FBF60002DF7E /* AppDelegate.swift */,
 				B297E1892049FBF60002DF7E /* ViewController.swift */,
+				B2C08411204D9B00007696B2 /* ABLLinkManager.swift */,
 				B27462DB204AC2B2009E4EC3 /* AKMIDISequencerAudioUnit */,
 				B297E1992049FC4D0002DF7E /* Link */,
 			);
@@ -316,6 +319,7 @@
 				B2C083FD204D81C0007696B2 /* AKMIDISequencerDSP.mm in Sources */,
 				B2C08401204D87A0007696B2 /* AKMIDISequencerAudioUnit.swift in Sources */,
 				B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */,
+				B2C08412204D9B00007696B2 /* ABLLinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
