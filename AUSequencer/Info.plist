@@ -45,5 +45,22 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>manufacturer</key>
+			<string>ccem</string>
+			<key>name</key>
+			<string>ArpBud: Audiobus Port</string>
+			<key>subtype</key>
+			<string>arpg</string>
+			<key>type</key>
+			<string>auri</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>ABLLinkStartStopSyncSupported</key>
+	<true/>
 </dict>
 </plist>
