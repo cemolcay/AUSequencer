@@ -38,7 +38,7 @@ typedef void (^LinkTempoChanged)(Float64 bpm);
 
 - (instancetype)initWithTempo:(Float64)bpm
              timelineTapBlock:(AKTimelineBlock)timelineBlock
-            completionHandler:(AudioEngineManagerInitCompletionHandler)completionHandler;
+            completionHandler:(AudioEngineInitCompletionHandler)completionHandler;
 
 - (void)start;
 - (void)stop;
