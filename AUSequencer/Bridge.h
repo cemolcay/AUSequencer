@@ -8,7 +8,7 @@
 
 #pragma once
 
-#import "AKMIDISequencerDSP.hpp"
+#import "AudioEngineManager.h"
 #import "Audiobus.h"
 #include "ABLLink.h"
 #include "ABLLinkUtils.h"
