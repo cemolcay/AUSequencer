@@ -1,12 +1,12 @@
 //
-//  AudioEngineManager.m
+//  AudioEngine.m
 //  ArpBud
 //
 //  Created by Cem Olcay on 6.03.2018.
 //  Copyright © 2018 cemolcay. All rights reserved.
 //
 
-#import "AudioEngineManager.h"
+#import "AudioEngine.h"
 #include <libkern/OSAtomic.h>
 #include <mach/mach_time.h>
 
@@ -171,7 +171,7 @@ static OSStatus audioCallback(
 }
 
 static void onSessionTempoChanged(Float64 bpm, void* context) {
-  AudioEngineManager* engine = (__bridge AudioEngineManager *)context;
+  AudioEngine* engine = (__bridge AudioEngine *)context;
   [engine setBpm:bpm];
   if (engine.linkTempoChangedBlock) {
     engine.linkTempoChangedBlock(bpm);
@@ -179,7 +179,7 @@ static void onSessionTempoChanged(Float64 bpm, void* context) {
 }
 
 static void onStartStopStateChanged(bool on, void* context) {
-  AudioEngineManager* engine = (__bridge AudioEngineManager *)context;
+  AudioEngine* engine = (__bridge AudioEngine *)context;
   if (engine.linkStartStopStateChangedBlock) {
     engine.linkStartStopStateChangedBlock(on);
   }
@@ -187,14 +187,14 @@ static void onStartStopStateChanged(bool on, void* context) {
 
 # pragma mark - AudioEngine
 
-@interface AudioEngineManager() {
+@interface AudioEngine() {
   AudioUnit _ioUnit;
   LinkData _linkData;
   AKTimelineTap *tap;
 }
 @end
 
-@implementation AudioEngineManager
+@implementation AudioEngine
 
 # pragma mark - Transport
 - (BOOL)isPlaying {
@@ -266,7 +266,7 @@ static void StreamFormatCallback(
                                  AudioUnitElement inElement)
 {
 #pragma unused(inID)
-  AudioEngineManager *engine = (__bridge AudioEngineManager *)inRefCon;
+  AudioEngine *engine = (__bridge AudioEngine *)inRefCon;
 
   if(inScope == kAudioUnitScope_Output && inElement == 0) {
     AudioStreamBasicDescription asbd;
@@ -293,7 +293,7 @@ static void StreamFormatCallback(
 # pragma mark - create and delete engine
 - (instancetype)initWithTempo:(Float64)bpm
              timelineTapBlock:(AKTimelineBlock)timelineBlock
-            completionHandler:(AudioEngineManagerInitCompletionHandler)completionHandler {
+            completionHandler:(AudioEngineInitCompletionHandler)completionHandler {
 
   if ([super init]) {
     [self initLinkData:bpm];

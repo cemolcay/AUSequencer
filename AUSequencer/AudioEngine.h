@@ -13,12 +13,12 @@
 #import "ABLLink.h"
 #import "Audiobus.h"
 
-typedef void (^AudioEngineManagerInitCompletionHandler)(AudioUnit audioUnit);
+typedef void (^AudioEngineInitCompletionHandler)(AudioUnit audioUnit);
 typedef void (^ABCoreMIDIEnableBlock)(BOOL isEnabled);
 typedef void (^LinkStartStopStateChanged)(BOOL on);
 typedef void (^LinkTempoChanged)(Float64 bpm);
 
-@interface AudioEngineManager : NSObject
+@interface AudioEngine : NSObject
 
 @property (nonatomic) Float64 bpm;
 @property (readonly, nonatomic) Float64 beatTime;

@@ -9,9 +9,9 @@
 import Foundation
 import AudioKit
 
-class AudioEngine {
-  static let shared = AudioEngine()
-  var engine: AudioEngineManager!
+class AudioEngineManager {
+  static let shared = AudioEngineManager()
+  var engine: AudioEngine!
 
   func start() {
     #if DEBUG
@@ -20,7 +20,7 @@ class AudioEngine {
       AKSettings.enableLogging = false
     #endif
 
-    engine = AudioEngineManager(
+    engine = AudioEngine(
       tempo: 120,
       timelineTap: timelineTapBlock,
       completionHandler: nil)

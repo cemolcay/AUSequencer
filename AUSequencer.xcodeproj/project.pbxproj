@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F5060D6D61596E2D121D95A /* Pods_AUSequencer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B776CA485C0B1C7079BCBBF /* Pods_AUSequencer.framework */; };
-		B2807925204ED9A50033D8CA /* AudioEngineManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2807921204ED9A50033D8CA /* AudioEngineManager.mm */; };
-		B2807926204ED9A50033D8CA /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2807922204ED9A50033D8CA /* AudioEngine.swift */; };
+		B2807925204ED9A50033D8CA /* AudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2807921204ED9A50033D8CA /* AudioEngine.mm */; };
+		B2807926204ED9A50033D8CA /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2807922204ED9A50033D8CA /* AudioEngineManager.swift */; };
 		B2807927204ED9A50033D8CA /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2807924204ED9A50033D8CA /* MIDIManager.swift */; };
 		B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297E1872049FBF60002DF7E /* AppDelegate.swift */; };
 		B297E18A2049FBF60002DF7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297E1892049FBF60002DF7E /* ViewController.swift */; };
@@ -41,9 +41,9 @@
 		9B6B71A853BCCD4EC6631A1A /* Pods-AUSequencer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBBD5C748E53FC1031F617B /* Pods_AUSequencer_AUv3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUSequencer_AUv3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27462C2204AB992009E4EC3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		B2807921204ED9A50033D8CA /* AudioEngineManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngineManager.mm; sourceTree = "<group>"; };
-		B2807922204ED9A50033D8CA /* AudioEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
-		B2807923204ED9A50033D8CA /* AudioEngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngineManager.h; sourceTree = "<group>"; };
+		B2807921204ED9A50033D8CA /* AudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngine.mm; sourceTree = "<group>"; };
+		B2807922204ED9A50033D8CA /* AudioEngineManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
+		B2807923204ED9A50033D8CA /* AudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngine.h; sourceTree = "<group>"; };
 		B2807924204ED9A50033D8CA /* MIDIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
 		B297E1842049FBF60002DF7E /* AUSequencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUSequencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B297E1872049FBF60002DF7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,10 +119,10 @@
 				B297E18B2049FBF60002DF7E /* Main.storyboard */,
 				B297E1872049FBF60002DF7E /* AppDelegate.swift */,
 				B297E1892049FBF60002DF7E /* ViewController.swift */,
-				B2807922204ED9A50033D8CA /* AudioEngine.swift */,
+				B2807922204ED9A50033D8CA /* AudioEngineManager.swift */,
 				B2807924204ED9A50033D8CA /* MIDIManager.swift */,
-				B2807923204ED9A50033D8CA /* AudioEngineManager.h */,
-				B2807921204ED9A50033D8CA /* AudioEngineManager.mm */,
+				B2807923204ED9A50033D8CA /* AudioEngine.h */,
+				B2807921204ED9A50033D8CA /* AudioEngine.mm */,
 				B297E1992049FC4D0002DF7E /* Link */,
 			);
 			path = AUSequencer;
@@ -303,9 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2807926204ED9A50033D8CA /* AudioEngine.swift in Sources */,
+				B2807926204ED9A50033D8CA /* AudioEngineManager.swift in Sources */,
 				B297E18A2049FBF60002DF7E /* ViewController.swift in Sources */,
-				B2807925204ED9A50033D8CA /* AudioEngineManager.mm in Sources */,
+				B2807925204ED9A50033D8CA /* AudioEngine.mm in Sources */,
 				B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */,
 				B2807927204ED9A50033D8CA /* MIDIManager.swift in Sources */,
 			);
