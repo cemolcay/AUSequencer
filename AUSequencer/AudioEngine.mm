@@ -51,6 +51,11 @@ typedef struct {
   BOOL isPlaying;
 } LinkData;
 
+typedef struct {
+  LinkData *linkRef;
+  AudioEngineRenderCallback callback;
+} AudioEngineRenderCallbackData;
+
 /*
  * Pull data from the main thread to the audio thread if lock can be
  * obtained. Otherwise, just use the local copy of the data.
@@ -106,7 +111,8 @@ static OSStatus audioCallback(
     memset(ioData->mBuffers[i].mData, 0, inNumberFrames * sizeof(SInt16));
   }
 
-  LinkData *linkData = (LinkData *)inRefCon;
+  AudioEngineRenderCallbackData *data = (AudioEngineRenderCallbackData *)inRefCon;
+  LinkData *linkData = data->linkRef;
 
   // Get a copy of the current link session state.
   const ABLLinkSessionStateRef sessionState =
@@ -157,21 +163,16 @@ static OSStatus audioCallback(
 
   ABLLinkCommitAudioSessionState(linkData->ablLink, sessionState);
 
-  // When playing, render the metronome sound
-  if (linkData->isPlaying) {
-    // Only render the metronome sound to the first channel. This
-    // might help with source separate for timing analysis.
-//    renderMetronomeIntoBuffer(
-//                              sessionState, engineData.quantum, hostTimeAtBufferBegin, linkData->sampleRate,
-//                              linkData->secondsToHostTime, inNumberFrames, &linkData->timeAtLastClick,
-//                              (SInt16*)ioData->mBuffers[0].mData);
+  // Send beat callback
+  if (data->callback) {
+    data->callback(ABLLinkBeatAtTime(sessionState, hostTimeAtBufferBegin, 4));
   }
 
   return noErr;
 }
 
 static void onSessionTempoChanged(Float64 bpm, void* context) {
-  AudioEngine* engine = (__bridge AudioEngine *)context;
+  AudioEngine *engine = (__bridge AudioEngine *)context;
   [engine setBpm:bpm];
   if (engine.linkTempoChangedBlock) {
     engine.linkTempoChangedBlock(bpm);
@@ -190,7 +191,7 @@ static void onStartStopStateChanged(bool on, void* context) {
 @interface AudioEngine() {
   AudioUnit _ioUnit;
   LinkData _linkData;
-  AKTimelineTap *tap;
+  AudioEngineRenderCallbackData _renderCallbackData;
 }
 @end
 
@@ -292,19 +293,19 @@ static void StreamFormatCallback(
 
 # pragma mark - create and delete engine
 - (instancetype)initWithTempo:(Float64)bpm
-             timelineTapBlock:(AKTimelineBlock)timelineBlock
+               renderCallback:(AudioEngineRenderCallback)renderCallbackBlock
             completionHandler:(AudioEngineInitCompletionHandler)completionHandler {
 
   if ([super init]) {
+    self.renderCallbackBlock = renderCallbackBlock;
+
     [self initLinkData:bpm];
     [self setupAudioEngine];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleRouteChange:)
                                                  name:AVAudioSessionRouteChangeNotification
                                                object:[AVAudioSession sharedInstance]];
-
-    tap = [[AKTimelineTap alloc] initWithAudioUnit:_ioUnit timelineBlock:timelineBlock];
-    [tap setPreRender:YES];
 
     if (completionHandler) {
       completionHandler(_ioUnit);
@@ -445,10 +446,14 @@ static void StreamFormatCallback(
              (int)result,
              (const char *)(&result));
 
+  _renderCallbackData = AudioEngineRenderCallbackData();
+  _renderCallbackData.linkRef = &_linkData;
+  _renderCallbackData.callback = self.renderCallbackBlock;
+
   // Set Audio Callback
   AURenderCallbackStruct ioRemoteInput;
   ioRemoteInput.inputProc = audioCallback;
-  ioRemoteInput.inputProcRefCon = &_linkData;
+  ioRemoteInput.inputProcRefCon = &_renderCallbackData;
 
   result = AudioUnitSetProperty(
                                 _ioUnit,
@@ -506,12 +511,12 @@ static void StreamFormatCallback(
                                audioUnit:_ioUnit];
   [sender setIsHidden:YES];
 
-  ABMIDISenderPort *midiSender = [[ABMIDISenderPort alloc]
-                                  initWithName:@"ArpBud MIDI Out"
-                                  title:@"ArpBud MIDI Out"];
+  self.midiSenderPort = [[ABMIDISenderPort alloc]
+                         initWithName:@"ArpBud MIDI Out"
+                         title:@"ArpBud MIDI Out"];
 
   __weak typeof(self) weakSelf = self;
-  
+
   ABMIDIReceiverPort *midiReceiver = [[ABMIDIReceiverPort alloc]
                                       initWithName:@"ArpBud MIDI In"
                                       title:@"ArpBud MIDI In"
@@ -532,9 +537,9 @@ static void StreamFormatCallback(
       weakSelf.coreMIDIReceivingEnabledBlock(receivingEnabled);
     }
   }];
-   
+
   [self.audiobusController addAudioSenderPort:sender];
-  [self.audiobusController addMIDISenderPort:midiSender];
+  [self.audiobusController addMIDISenderPort:self.midiSenderPort];
   [self.audiobusController addMIDIReceiverPort:midiReceiver];
 }
 

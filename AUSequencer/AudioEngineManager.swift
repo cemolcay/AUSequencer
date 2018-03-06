@@ -1,5 +1,5 @@
 //
-//  AudioEngine.swift
+//  AudioEngineManager.swift
 //  ArpBud
 //
 //  Created by Cem Olcay on 5.03.2018.
@@ -11,7 +11,11 @@ import AudioKit
 
 class AudioEngineManager {
   static let shared = AudioEngineManager()
-  var engine: AudioEngine!
+  private(set) var engine: AudioEngine!
+  var isPlaying = false
+
+  var renderCallback: ((_ beat: Double) -> Void)?
+  var linkTempoCallback: ((_ bpm: Double) -> Void)?
 
   func start() {
     #if DEBUG
@@ -22,11 +26,17 @@ class AudioEngineManager {
 
     engine = AudioEngine(
       tempo: 120,
-      timelineTap: timelineTapBlock,
+      renderCallback: { [weak self] beat in
+        self?.renderCallback?(beat)
+      },
       completionHandler: nil)
 
-    engine.linkStartStopStateChangedBlock = { on in
-      print("link start stop state changed \(on)")
+    engine.linkStartStopStateChangedBlock = { [weak self] on in
+      self?.isPlaying = on
+    }
+
+    engine.linkTempoChangedBlock = { [weak self] bpm in
+      self?.linkTempoCallback?(bpm)
     }
 
     engine.coreMIDIReceivingEnabledBlock = { isEnabled in
@@ -44,14 +54,5 @@ class AudioEngineManager {
   var linkSettingsController: ABLLinkSettingsViewController? {
     guard let linkRef = engine.linkRef else { return nil }
     return ABLLinkSettingsViewController.instance(linkRef)
-  }
-
-  func timelineTapBlock(
-    timeline: UnsafeMutablePointer<AKTimeline>,
-    timestamp: UnsafeMutablePointer<AudioTimeStamp>,
-    offset: UInt32,
-    frames: UInt32,
-    ioData: UnsafeMutablePointer<AudioBufferList>) {
-    return
   }
 }
