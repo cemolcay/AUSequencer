@@ -67,8 +67,8 @@ class StepSequencer {
 
 var seq = StepSequencer()
 seq.count = 10
-seq.arpeggio = .random
+seq.arpeggio = .updown(.up)
 
-for i in 0..<20 {
+for i in 0..<130 {
   seq.nextStepIndex
 }

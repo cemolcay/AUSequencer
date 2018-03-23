@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 indirect enum StepSequencerArpeggio {
   case up
   case down
