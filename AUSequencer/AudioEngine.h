@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #include <AudioToolbox/AudioToolbox.h>
 #include <AVFoundation/AVFoundation.h>
-#include "AudioKit/AudioKit.h"
 #import "ABLLink.h"
 #import "Audiobus.h"
 

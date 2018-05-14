@@ -5,8 +5,3 @@ target 'AUSequencer' do
   pod 'AudioKit'
   pod 'Audiobus'
 end
-
-target 'AUSequencer AUv3' do
-  use_frameworks!
-  pod 'AudioKit'
-end
