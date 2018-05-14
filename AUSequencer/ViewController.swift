@@ -11,9 +11,21 @@ import AudioKitUI
 import AudioKit
 
 class ViewController: UIViewController {
+  var sequencer = StepSequencer()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    AudioEngineManager.shared.start()
+    AudioEngineManager.shared.renderCallback = renderCallback
+
+  }
+
+  @IBAction func playButtonPressed(sender: UIButton) {
+    AudioEngineManager.shared.isPlaying = !AudioEngineManager.shared.isPlaying
+    sender.setTitle(AudioEngineManager.shared.isPlaying ? "Stop" : "Play", for: .normal)
+  }
+
+  func renderCallback(bpm: Double) {
+    guard AudioEngineManager.shared.isPlaying else { return }
   }
 }

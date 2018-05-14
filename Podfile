@@ -4,4 +4,6 @@ target 'AUSequencer' do
   use_frameworks!
   pod 'AudioKit'
   pod 'Audiobus'
+  pod 'MusicTheorySwift'
+  pod 'MIDIEventKit'
 end

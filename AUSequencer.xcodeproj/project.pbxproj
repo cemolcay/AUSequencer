@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F5060D6D61596E2D121D95A /* Pods_AUSequencer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B776CA485C0B1C7079BCBBF /* Pods_AUSequencer.framework */; };
+		B20B3D0A206546A9005E3FB9 /* AUSequencerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B3D09206546A9005E3FB9 /* AUSequencerTests.swift */; };
 		B2807925204ED9A50033D8CA /* AudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2807921204ED9A50033D8CA /* AudioEngine.mm */; };
 		B2807926204ED9A50033D8CA /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2807922204ED9A50033D8CA /* AudioEngineManager.swift */; };
 		B2807927204ED9A50033D8CA /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2807924204ED9A50033D8CA /* MIDIManager.swift */; };
@@ -19,7 +20,18 @@
 		B297E1A22049FC4E0002DF7E /* libABLLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A02049FC4D0002DF7E /* libABLLink.a */; };
 		B297E1A82049FC5F0002DF7E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A72049FC5F0002DF7E /* AudioToolbox.framework */; };
 		B2C083FF204D86AA007696B2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B297E1A42049FC550002DF7E /* libc++.tbd */; };
+		B2F1A90620594A59001CF03A /* StepSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F1A90520594A59001CF03A /* StepSequencer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B20B3D0C206546A9005E3FB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B297E17C2049FBF60002DF7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B297E1832049FBF60002DF7E;
+			remoteInfo = AUSequencer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B27462DA204AC1D2009E4EC3 /* Embed App Extensions */ = {
@@ -40,6 +52,10 @@
 		7B30DD865111C34E60F34D2A /* Pods-AUSequencer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer.release.xcconfig"; sourceTree = "<group>"; };
 		9B6B71A853BCCD4EC6631A1A /* Pods-AUSequencer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBBD5C748E53FC1031F617B /* Pods_AUSequencer_AUv3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUSequencer_AUv3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20B3D07206546A9005E3FB9 /* AUSequencerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUSequencerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20B3D09206546A9005E3FB9 /* AUSequencerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUSequencerTests.swift; sourceTree = "<group>"; };
+		B20B3D0B206546A9005E3FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20B3D112065474D005E3FB9 /* SequencerTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SequencerTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B27462C2204AB992009E4EC3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		B2807921204ED9A50033D8CA /* AudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngine.mm; sourceTree = "<group>"; };
 		B2807922204ED9A50033D8CA /* AudioEngineManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
@@ -61,10 +77,18 @@
 		B297E1A72049FC5F0002DF7E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B297E1A92049FC870002DF7E /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		B297E1B6204AB4520002DF7E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B2F1A90520594A59001CF03A /* StepSequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSequencer.swift; sourceTree = "<group>"; };
 		EF851730127CE0220F328EE1 /* Pods-AUSequencer AUv3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUSequencer AUv3.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUSequencer AUv3/Pods-AUSequencer AUv3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B20B3D04206546A9005E3FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1812049FBF60002DF7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,10 +114,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B20B3D08206546A9005E3FB9 /* AUSequencerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B20B3D09206546A9005E3FB9 /* AUSequencerTests.swift */,
+				B20B3D0B206546A9005E3FB9 /* Info.plist */,
+			);
+			path = AUSequencerTests;
+			sourceTree = "<group>";
+		};
 		B297E17B2049FBF60002DF7E = {
 			isa = PBXGroup;
 			children = (
 				B297E1862049FBF60002DF7E /* AUSequencer */,
+				B20B3D08206546A9005E3FB9 /* AUSequencerTests */,
 				B297E1852049FBF60002DF7E /* Products */,
 				B297E1A32049FC540002DF7E /* Frameworks */,
 				2C898175A6DBDDB221BB0298 /* Pods */,
@@ -104,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B297E1842049FBF60002DF7E /* AUSequencer.app */,
+				B20B3D07206546A9005E3FB9 /* AUSequencerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +146,7 @@
 		B297E1862049FBF60002DF7E /* AUSequencer */ = {
 			isa = PBXGroup;
 			children = (
+				B20B3D112065474D005E3FB9 /* SequencerTest.playground */,
 				B297E1A62049FC5F0002DF7E /* AUSequencer.entitlements */,
 				B297E1932049FBF60002DF7E /* Info.plist */,
 				B297E1A92049FC870002DF7E /* Bridge.h */,
@@ -119,6 +155,7 @@
 				B297E18B2049FBF60002DF7E /* Main.storyboard */,
 				B297E1872049FBF60002DF7E /* AppDelegate.swift */,
 				B297E1892049FBF60002DF7E /* ViewController.swift */,
+				B2F1A90520594A59001CF03A /* StepSequencer.swift */,
 				B2807922204ED9A50033D8CA /* AudioEngineManager.swift */,
 				B2807924204ED9A50033D8CA /* MIDIManager.swift */,
 				B2807923204ED9A50033D8CA /* AudioEngine.h */,
@@ -171,6 +208,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B20B3D06206546A9005E3FB9 /* AUSequencerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20B3D0E206546A9005E3FB9 /* Build configuration list for PBXNativeTarget "AUSequencerTests" */;
+			buildPhases = (
+				B20B3D03206546A9005E3FB9 /* Sources */,
+				B20B3D04206546A9005E3FB9 /* Frameworks */,
+				B20B3D05206546A9005E3FB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20B3D0D206546A9005E3FB9 /* PBXTargetDependency */,
+			);
+			name = AUSequencerTests;
+			productName = AUSequencerTests;
+			productReference = B20B3D07206546A9005E3FB9 /* AUSequencerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B297E1832049FBF60002DF7E /* AUSequencer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B297E1962049FBF60002DF7E /* Build configuration list for PBXNativeTarget "AUSequencer" */;
@@ -202,6 +257,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = cemolcay;
 				TargetAttributes = {
+					B20B3D06206546A9005E3FB9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B297E1832049FBF60002DF7E;
+					};
 					B297E1832049FBF60002DF7E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -230,11 +290,19 @@
 			projectRoot = "";
 			targets = (
 				B297E1832049FBF60002DF7E /* AUSequencer */,
+				B20B3D06206546A9005E3FB9 /* AUSequencerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B20B3D05206546A9005E3FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1822049FBF60002DF7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,9 +322,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AUSequencer/Pods-AUSequencer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MIDIEventKit/MIDIEventKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIDIEventKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicTheorySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -299,6 +372,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B20B3D03206546A9005E3FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20B3D0A206546A9005E3FB9 /* AUSequencerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B297E1802049FBF60002DF7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,12 +387,21 @@
 				B2807926204ED9A50033D8CA /* AudioEngineManager.swift in Sources */,
 				B297E18A2049FBF60002DF7E /* ViewController.swift in Sources */,
 				B2807925204ED9A50033D8CA /* AudioEngine.mm in Sources */,
+				B2F1A90620594A59001CF03A /* StepSequencer.swift in Sources */,
 				B297E1882049FBF60002DF7E /* AppDelegate.swift in Sources */,
 				B2807927204ED9A50033D8CA /* MIDIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B20B3D0D206546A9005E3FB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B297E1832049FBF60002DF7E /* AUSequencer */;
+			targetProxy = B20B3D0C206546A9005E3FB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B297E18B2049FBF60002DF7E /* Main.storyboard */ = {
@@ -333,6 +423,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B20B3D0F206546A9005E3FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = AUSequencerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.AUSequencerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUSequencer.app/AUSequencer";
+			};
+			name = Debug;
+		};
+		B20B3D10206546A9005E3FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = AUSequencerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.AUSequencerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUSequencer.app/AUSequencer";
+			};
+			name = Release;
+		};
 		B297E1942049FBF60002DF7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -539,6 +663,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B20B3D0E206546A9005E3FB9 /* Build configuration list for PBXNativeTarget "AUSequencerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20B3D0F206546A9005E3FB9 /* Debug */,
+				B20B3D10206546A9005E3FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B297E17F2049FBF60002DF7E /* Build configuration list for PBXProject "AUSequencer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
